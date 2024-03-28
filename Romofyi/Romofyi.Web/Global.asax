@@ -1,0 +1,1 @@
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Romofyi.Web.MvcApplication" Language="C#" %>
