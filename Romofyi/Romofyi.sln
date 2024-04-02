@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Romofyi.Web", "Romofyi.Web\Romofyi.Web.csproj", "{D8001726-6A13-423E-BB90-EEF2E0993AF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Romofyi.Domain", "Romofyi.Domain\Romofyi.Domain.csproj", "{64177D0B-800F-4A82-8233-2EE059CD9B52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Romofyi.Database", "Romofyi.Database\Romofyi.Database.csproj", "{2FE728B6-AC08-494F-85FA-02B02609D202}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Romofyi.Application", "Romofyi.Application\Romofyi.Application.csproj", "{186040F8-7107-4CFE-B9A5-007A95156DB1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8001726-6A13-423E-BB90-EEF2E0993AF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8001726-6A13-423E-BB90-EEF2E0993AF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8001726-6A13-423E-BB90-EEF2E0993AF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8001726-6A13-423E-BB90-EEF2E0993AF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64177D0B-800F-4A82-8233-2EE059CD9B52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64177D0B-800F-4A82-8233-2EE059CD9B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64177D0B-800F-4A82-8233-2EE059CD9B52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64177D0B-800F-4A82-8233-2EE059CD9B52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FE728B6-AC08-494F-85FA-02B02609D202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FE728B6-AC08-494F-85FA-02B02609D202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FE728B6-AC08-494F-85FA-02B02609D202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FE728B6-AC08-494F-85FA-02B02609D202}.Release|Any CPU.Build.0 = Release|Any CPU
+		{186040F8-7107-4CFE-B9A5-007A95156DB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{186040F8-7107-4CFE-B9A5-007A95156DB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{186040F8-7107-4CFE-B9A5-007A95156DB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{186040F8-7107-4CFE-B9A5-007A95156DB1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
