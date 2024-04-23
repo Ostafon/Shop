@@ -1,0 +1,210 @@
+﻿@model WebApplication1.Controllers.WebApplication1.Models.RegisterViewModel
+
+@{
+    ViewBag.Title = "Register";
+    Layout = ""; // указываем путь к вашему общему макету
+}
+<section class="form-section">
+    <form class="form" autocomplete="off" method="post" action="@Url.Action("Register", "Auth")">
+        @Html.AntiForgeryToken()
+        <div class="control">
+            <h1>Sign Up</h1>
+        </div>
+        <div class="control block-cube block-input">
+            @Html.TextBoxFor(m => m.Username, new { @class = "form-control", placeholder = "Username" })
+            @Html.ValidationMessageFor(m => m.Username, "", new { @class = "text-danger" })
+            <div class="bg-top">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg-right">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg">
+                <div class="bg-inner"></div>
+            </div>
+        </div>
+        <div class="control block-cube block-input">
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            <div class="bg-top">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg-right">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg">
+                <div class="bg-inner"></div>
+            </div>
+        </div>
+        <div class="control block-cube block-input">
+            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", placeholder = "Confirm Password" })
+            @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+            <div class="bg-top">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg-right">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg">
+                <div class="bg-inner"></div>
+            </div>
+        </div>
+        <button class="btn block-cube block-cube-hover" type="submit">
+            <div class="bg-top">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg-right">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="text">Sign Up</div>
+        </button>
+        <div class="credits">
+            <a href="https://codepen.io/marko-zub/" target="_blank">My other codepens</a>
+        </div>
+    </form>
+</section>
+
+<style>
+    body {
+        background-color: #212121;
+        color: #fff;
+        font-family: monospace, serif;
+        letter-spacing: 0.05em;
+    }
+
+    .form-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .form {
+        width: 300px;
+        padding: 64px 15px 24px;
+        margin: 0 auto;
+    }
+
+    .control {
+        margin: 0 0 24px;
+    }
+
+    .control input {
+        width: 100%;
+        padding: 14px 16px;
+        border: 0;
+        background: transparent;
+        color: #fff;
+        font-family: monospace, serif;
+        letter-spacing: 0.05em;
+        font-size: 16px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .control input:hover,
+    .control input:focus {
+        outline: none;
+        border: 0;
+    }
+
+    .btn {
+        width: 100%;
+        display: block;
+        padding: 14px 16px;
+        background: transparent;
+        outline: none;
+        border: 0;
+        color: #fff;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+        font-family: monospace;
+        font-size: 16px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .block-cube {
+        position: relative;
+    }
+
+    .block-cube .bg-top {
+        position: absolute;
+        height: 10px;
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(52,9,121,1) 37%, rgba(0,212,255,1) 94%);
+        bottom: 100%;
+        left: 5px;
+        right: -5px;
+        transform: skew(-45deg, 0);
+        margin: 0;
+        z-index: 1;
+    }
+
+    .block-cube .bg-top .bg-inner {
+        bottom: 0;
+    }
+
+    .block-cube .bg-right {
+        position: absolute;
+        background: rgba(0,212,255,1);
+        top: -5px;
+        z-index: 0;
+        bottom: 5px;
+        width: 10px;
+        left: 100%;
+        transform: skew(0, -45deg);
+    }
+
+    .block-cube .bg-right .bg-inner {
+        left: 0;
+    }
+
+    .block-cube .bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(52,9,121,1) 37%, rgba(0,212,255,1) 94%);
+        z-index: 1;
+    }
+
+    .block-cube .bg .bg-inner {
+        background: #212121;
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+    }
+
+    .block-cube .text {
+        position: relative;
+        z-index: 2;
+    }
+
+    .credits {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        padding: 15px 15px;
+        width: 100%;
+        z-index: 111;
+    }
+
+    .credits a {
+        opacity: 0.6;
+        color: #fff;
+        font-size: 11px;
+        text-decoration: none;
+    }
+
+    .credits a:hover {
+        opacity: 1;
+    }
+</style>
