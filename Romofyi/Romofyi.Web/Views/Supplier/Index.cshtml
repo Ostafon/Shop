@@ -1,0 +1,51 @@
+@model IEnumerable<Romofyi.Domain.Supplier>
+
+@{
+    ViewBag.Title = "Suppliers";
+}
+
+<h2>Suppliers</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactPerson)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactPerson)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.SupplierID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.SupplierID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.SupplierID })
+            </td>
+        </tr>
+    }
+
+</table>
